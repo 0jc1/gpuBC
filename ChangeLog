@@ -1,0 +1,6 @@
+09/19/2013:
+-bug fixed in normalization and matrix market reading method. SNAP format is supported.
+07/18/2013:
+-changing license to Apache
+01/28/2013:
+-initial release

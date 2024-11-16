@@ -1,0 +1,7 @@
+nvcc -O2 -g -c  preproc.cu -arch sm_20
+nvcc -O2 -g -c  bc_vertex.cu -arch sm_20
+nvcc -O2 -g -c  bc_edge.cu -arch sm_20
+nvcc -O2 -g -c  bc_virtual.cu -arch sm_20
+
+g++ -fopenmp -O2 -g -c gpu-bc.cpp hetero_virtual_deg1.cpp ulib.c
+nvcc -lgomp -O2 *.o -o gpu_bc
